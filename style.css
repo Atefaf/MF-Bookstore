@@ -5,21 +5,21 @@
 }
 
 :root {
-    --primary: #059669; /* Emerald */
-    --secondary: #D97706; /* Amber Gold */
-    --accent: #8b5cf6; /* Violet */
-    --bg-deep: #0f172a; /* Deep Navy */
+    --accent-cyan: #2dd4bf;
+    --accent-pink: #f43f5e;
+    --accent-purple: #a855f7;
+    --bg-deep: #0f172a;
     --surface-alpha: rgba(30, 41, 59, 0.7);
     --glass-border: rgba(255, 255, 255, 0.08);
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
-    --grad-primary: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+    --grad-primary: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple), var(--accent-pink));
     --card-glow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     
-    --body-bg: radial-gradient(at 0% 0%, rgba(5, 150, 105, 0.15) 0px, transparent 50%),
-               radial-gradient(at 100% 100%, rgba(217, 119, 6, 0.1) 0px, transparent 50%),
-               radial-gradient(at 50% 50%, rgba(139, 92, 246, 0.05) 0px, transparent 50%);
+    --body-bg: radial-gradient(at 0% 0%, rgba(45, 212, 191, 0.15) 0px, transparent 50%),
+               radial-gradient(at 100% 100%, rgba(244, 63, 94, 0.1) 0px, transparent 50%),
+               radial-gradient(at 50% 50%, rgba(168, 85, 247, 0.05) 0px, transparent 50%);
 }
 
 body.light {
@@ -28,11 +28,11 @@ body.light {
     --glass-border: rgba(15, 23, 42, 0.08);
     --text-primary: #0f172a;
     --text-secondary: #475569;
-    --primary: #059669;
-    --secondary: #b45309;
+    --accent-cyan: #0d9488;
+    --accent-pink: #e11d48;
 
-    --body-bg: radial-gradient(at 0% 0%, rgba(5, 150, 105, 0.08) 0px, transparent 50%),
-               radial-gradient(at 100% 100%, rgba(217, 119, 6, 0.06) 0px, transparent 50%);
+    --body-bg: radial-gradient(at 0% 0%, rgba(45, 212, 191, 0.08) 0px, transparent 50%),
+               radial-gradient(at 100% 100%, rgba(244, 63, 94, 0.06) 0px, transparent 50%);
 }
 
 @keyframes bgAnimate {
@@ -74,7 +74,7 @@ body {
     transition: all 0.3s ease;
 }
 .glass-card:hover {
-    border-color: var(--primary);
+    border-color: var(--accent-cyan);
     transform: translateY(-5px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
@@ -127,7 +127,7 @@ body.light header { background: rgba(248,250,252,0.85); }
     transition: 0.3s;
 }
 .nav-links a:hover::after { width: 100%;}
-.nav-links a:hover { color: var(--primary);}
+.nav-links a:hover { color: var(--accent-cyan);}
 .theme-toggle {
     background: rgba(255,255,255,0.08);
     border: 1px solid var(--glass-border);
@@ -183,7 +183,7 @@ body.light header { background: rgba(248,250,252,0.85); }
     backdrop-filter: blur(4px);
     transition: 0.3s;
 }
-.search-wrapper input:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 25px rgba(5, 150, 105, 0.3);}
+.search-wrapper input:focus { border-color: var(--accent-cyan); outline: none; box-shadow: 0 0 25px rgba(45, 212, 191, 0.3);}
 
 /* Catalog */
 .catalog-grid {
@@ -203,7 +203,7 @@ body.light header { background: rgba(248,250,252,0.85); }
     transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
     cursor: pointer;
 }
-.book-card:hover { transform: translateY(-12px) scale(1.02); box-shadow: var(--card-glow); border-color: var(--primary);}
+.book-card:hover { transform: translateY(-12px) scale(1.02); box-shadow: var(--card-glow); border-color: var(--accent-cyan);}
 .card-img { height: 320px; overflow: hidden; position: relative; }
 .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
 .book-card:hover .card-img img { transform: scale(1.08);}
@@ -211,7 +211,7 @@ body.light header { background: rgba(248,250,252,0.85); }
     position: absolute; top: 12px; left: 16px;
     background: rgba(0,0,0,0.65); backdrop-filter: blur(8px);
     border-radius: 40px; padding: 0.3rem 1rem; font-weight: 700;
-    color: var(--secondary);
+    color: var(--accent-pink);
 }
 .card-body { padding: 1.5rem; }
 .btn-group { display: flex; gap: 0.8rem; margin-top: 1rem; }
@@ -237,7 +237,7 @@ body.light header { background: rgba(248,250,252,0.85); }
 .main-cover img { width: 100%; display: block; }
 .thumbnail-strip { display: flex; gap: 12px; margin-top: 1rem; flex-wrap: wrap; }
 .thumb { width: 80px; height: 70px; object-fit: cover; border-radius: 1rem; cursor: pointer; border: 2px solid transparent; transition: 0.2s;}
-.thumb.active { border-color: var(--primary); transform: scale(1.05);}
+.thumb.active { border-color: var(--accent-cyan); transform: scale(1.05);}
 .stats-grid { display: flex; gap: 1.2rem; margin: 1.5rem 0; }
 .stat-item { background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 0.7rem 1.2rem; text-align: center; border: 1px solid var(--glass-border);}
 .action-buttons { display: flex; gap: 1.2rem; margin: 2rem 0; }
@@ -250,12 +250,13 @@ body.light header { background: rgba(248,250,252,0.85); }
     min-width: 200px; backdrop-filter: blur(12px); border: 1px solid var(--glass-border);
     text-align: center; transition: all 0.3s;
 }
-.stat-bubble:hover { transform: translateY(-10px); border-color: var(--primary);}
+.stat-bubble:hover { transform: translateY(-10px); border-color: var(--accent-cyan);}
 .counter { font-size: 2.8rem; font-weight: 800; background: var(--grad-primary); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .timeline-work { display: flex; flex-direction: column; gap: 1.5rem; max-width: 700px; margin: 2rem auto; }
 .milestone {
     display: flex; gap: 1.2rem; align-items: center;
-.milestone:hover { background: rgba(5, 150, 105, 0.1); transform: translateX(-5px);}
+}
+.milestone:hover { background: rgba(45, 212, 191, 0.1); transform: translateX(-5px);}
 
 /* Modal */
 .modal {
@@ -271,6 +272,6 @@ body.light header { background: rgba(248,250,252,0.85); }
 footer { text-align: center; padding: 2.5rem; border-top: 1px solid var(--glass-border); margin-top: 2rem; }
 .social-icons { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; }
 .social-icons a { color: var(--text-secondary); font-size: 2rem; transition: 0.3s; }
-.social-icons a:hover { color: var(--primary); transform: translateY(-5px);}
+.social-icons a:hover { color: var(--accent-cyan); transform: translateY(-5px);}
 
 @media (max-width: 850px) { .detail-flex { grid-template-columns: 1fr; } .hero h1 { font-size: 2.2rem; } .nav-links { gap: 1rem; } }
