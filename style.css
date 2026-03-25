@@ -209,10 +209,16 @@ body.light header { background: rgba(248,250,252,0.85); }
 .book-card:hover .card-img img { transform: scale(1.08);}
 .price-tag {
     position: absolute; top: 12px; left: 16px;
-    background: rgba(0,0,0,0.65); backdrop-filter: blur(8px);
-    border-radius: 40px; padding: 0.3rem 1rem; font-weight: 700;
-    color: var(--accent-pink);
+    background: rgba(0,0,0,0.75); backdrop-filter: blur(12px);
+    border-radius: 1.2rem; padding: 0.5rem 1rem; font-weight: 700;
+    display: flex; flex-direction: column; align-items: center; gap: 2px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
+.old-price { text-decoration: line-through; font-size: 0.75rem; color: var(--text-secondary); opacity: 0.8; }
+.new-price { font-size: 1.1rem; color: var(--accent-cyan); }
+.new-price::after { content: ' ج.م'; font-size: 0.8rem; }
+.old-price::after { content: ' ج.م'; }
 .card-body { padding: 1.5rem; }
 .btn-group { display: flex; gap: 0.8rem; margin-top: 1rem; }
 .btn-sm {
@@ -222,7 +228,26 @@ body.light header { background: rgba(248,250,252,0.85); }
     font-family: 'Cairo', sans-serif;
 }
 .preview-btn { background: rgba(255,255,255,0.08); color: var(--text-primary); border: 1px solid var(--glass-border);}
-.buy-btn { background: var(--grad-primary); color: white; }
+.buy-btn { background: var(--grad-primary); color: white; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3); }
+.buy-btn:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5); }
+
+/* Request Card */
+.request-card {
+    background: rgba(45, 212, 191, 0.05);
+    border: 2px dashed var(--accent-cyan) !important;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 2.5rem 1.5rem; gap: 1.2rem;
+    min-height: 400px;
+}
+.request-card i { font-size: 3.5rem; color: var(--accent-cyan); margin-bottom: 0.5rem; }
+.request-card h3 { font-size: 1.6rem; font-weight: 800; }
+.request-input {
+    width: 100%; max-width: 250px; padding: 0.8rem 1.2rem; border-radius: 2rem;
+    border: 1px solid var(--glass-border); background: rgba(255,255,255,0.05);
+    color: var(--text-primary); font-family: 'Cairo'; text-align: center;
+    transition: 0.3s;
+}
+.request-input:focus { border-color: var(--accent-cyan); outline: none; background: rgba(255,255,255,0.1); }
 
 /* Detail Page */
 .detail-container { max-width: 1300px; margin: 2rem auto; padding: 2rem; }
@@ -242,6 +267,28 @@ body.light header { background: rgba(248,250,252,0.85); }
 .stat-item { background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 0.7rem 1.2rem; text-align: center; border: 1px solid var(--glass-border);}
 .action-buttons { display: flex; gap: 1.2rem; margin: 2rem 0; }
 .btn-large { padding: 0.9rem 2rem; border-radius: 40px; font-weight: 700; border: none; display: flex; align-items: center; gap: 10px; cursor: pointer; font-family: 'Cairo', sans-serif;}
+
+/* FAQ Accordion */
+.faq-container { margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+.faq-item {
+    background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border);
+    border-radius: 1rem; overflow: hidden; transition: 0.3s;
+}
+.faq-item.active { border-color: var(--accent-cyan); box-shadow: 0 4px 15px rgba(45, 212, 191, 0.2); }
+.faq-question {
+    padding: 1rem 1.2rem; cursor: pointer; font-weight: 700;
+    display: flex; justify-content: space-between; align-items: center;
+    color: var(--text-primary); transition: background 0.3s;
+}
+.faq-question:hover { background: rgba(255,255,255,0.05); }
+.faq-question i { transition: transform 0.3s; color: var(--accent-cyan); }
+.faq-item.active .faq-question i { transform: rotate(180deg); }
+.faq-answer {
+    max-height: 0; overflow: hidden; padding: 0 1.2rem;
+    color: var(--text-secondary); line-height: 1.6;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+.faq-item.active .faq-answer { max-height: 800px; padding: 0 1.2rem 1.2rem; }
 
 /* About section with animated counters */
 .stats-showcase { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin: 3rem 0; }
