@@ -284,7 +284,7 @@ themeBtn.addEventListener('click', () => {
 });
 document.getElementById('closePreviewModal').addEventListener('click', () => { document.getElementById('previewModal').classList.remove('active'); document.getElementById('previewVideoContainer').innerHTML = ''; });
 document.getElementById('previewModal').addEventListener('click', (e) => { if(e.target === document.getElementById('previewModal')) { document.getElementById('previewModal').classList.remove('active'); document.getElementById('previewVideoContainer').innerHTML = ''; } });
-document.getElementById('fakeContactForm').addEventListener('submit', (e) => { e.preventDefault(); alert('✨ شكراً لتواصلك! سنرد عليك قريباً ✨'); e.target.reset(); });
+// fakeContactForm removed
 
 renderCatalog("");
 
