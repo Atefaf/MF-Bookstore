@@ -138,12 +138,10 @@ function renderCatalog(filter = "") {
                     <span class="old-price">${book.oldPrice}</span>
                     <span class="new-price">${book.price}</span>
                 </div>
+                <div class="promo-ribbon"><i class="fa-solid fa-fire"></i> عرض: 2 بـ 550 / 3 بـ 700</div>
                 <img src="${book.cover}" alt="${book.title}" loading="lazy">
             </div>
             <div class="card-body">
-                <div style="background: rgba(244, 63, 94, 0.1); color: var(--accent-pink); border: 1px dashed var(--accent-pink); padding: 5px; border-radius: 5px; font-size: 0.85rem; text-align: center; margin-bottom: 10px; font-weight: bold;">
-                    🔥 عرض: سلسلتين بـ 550 / 3 سلاسل بـ 700
-                </div>
                 <h3 style="font-size:1.3rem; margin-bottom: 5px;">${book.title}</h3>
                 <p style="color: var(--text-secondary); font-size: 0.9rem;">${book.author} • ${book.category}</p>
                 <div class="btn-group">
