@@ -115,6 +115,10 @@ const books = [
     { id: 11, title: "Disney Kids Readers", author: "Disney", price: 200, oldPrice: 500, category: "Kids", cover: "https://img.youtube.com/vi/EADIGfYqiQM/hqdefault.jpg", images: ["https://img.youtube.com/vi/EADIGfYqiQM/hqdefault.jpg"], preview: "https://www.youtube.com/embed/ZzVxs6aPXR4?si=29FpgL4VytNABB8Y", moreVideos: ["https://www.youtube.com/embed/EADIGfYqiQM?si=7oKVdSiGpPiADHs_"], faqs: [
         { q: "كتاب Disney Kids Readers ده مناسب لطفل في سن إيه؟", a: "ده كتاب من بيرسون بيستخدم شخصيات ديزني (ميكي، ميني، إلسا، وغيرهم) لتعليم الأطفال اللغة الإنجليزية. مناسب من سن 4 لـ 12 سنة." },
         { q: "الكتاب ده بيتبع منهج إيه؟ وإيه المناهج المصرية اللي بيتوافق معاها؟", a: "الكتاب:\n- متوافق مع منهج بيرسون الدولي (Pearson English Readers).\n- متوافق مع مدارس اللغات المصرية في مرحلة KG والابتدائية (كنشاط قراءة).\n- متوافق مع استراتيجيات تعليم القراءة في وزارة التربية والتعليم.\n- بيستخدم في مراكز اللغات لتعليم الأطفال بطريقة ممتعة." }
+    ] },
+    { id: 12, title: "Speak Out", author: "Pearson", price: 350, oldPrice: 800, category: "General English", cover: "assets/SPEAKOUT.jpg", images: ["assets/SPEAKOUT.jpg"], preview: "https://www.youtube.com/embed/Se0Q2scjAu8?si=QgILYIiEa_TSS7lr", faqs: [
+        { q: "كتاب Speak Out ده بيعلم إيه؟", a: "ده كتاب متخصص في تعليم اللغة الإنجليزية للكبار من Pearson بالتعاون مع BBC. بيركز بشكل أساسي على المحادثة والاستماع." },
+        { q: "الكتاب مناسب لمين؟", a: "مناسب جداً للبالغين والشباب اللي عايزين يتكلموا إنجليزي بثقة في مواقف الحياة اليومية أو في بيئة العمل." }
     ] }
 ];
 
