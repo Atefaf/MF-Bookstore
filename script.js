@@ -138,7 +138,6 @@ function renderCatalog(filter = "") {
                     <span class="old-price">${book.oldPrice}</span>
                     <span class="new-price">${book.price}</span>
                 </div>
-                <div class="promo-ribbon"><i class="fa-solid fa-fire"></i> عرض: 2 بـ 550 / 3 بـ 700</div>
                 <img src="${book.cover}" alt="${book.title}" loading="lazy">
             </div>
             <div class="card-body">
