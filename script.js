@@ -229,15 +229,7 @@ function openDetailView(id) {
 
     const thumbStrip = document.getElementById('thumbnailStrip');
 
-    // For "More Videos", show them as thumbnails or buttons
-    let imagesHtml = book.images.map((img, idx) => `<img class="thumb ${idx===0?'active':''}" src="${img}" data-img="${img}" alt="thumb">`).join('');
-    
-    thumbStrip.innerHTML = imagesHtml;
-    document.querySelectorAll('.thumb').forEach(thumb => thumb.addEventListener('click', () => {
-        document.getElementById('detailMainImg').src = thumb.dataset.img;
-        document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
-        thumb.classList.add('active');
-    }));
+    // Thumbnails removed.
 
     const actionDiv = document.getElementById('detailActions');
     actionDiv.innerHTML = `
@@ -247,13 +239,7 @@ function openDetailView(id) {
     if(book.preview) document.getElementById('detailPreviewBtn').onclick = () => openPreviewModal(book.id);
     document.getElementById('detailBuyBtn').onclick = () => openBuyWhatsapp(book.id);
 
-    // If there are more videos, add them section
-    if(book.moreVideos && book.moreVideos.length > 0) {
-        const moreSec = document.createElement('div');
-        moreSec.style.marginTop = "2rem";
-        moreSec.innerHTML = `<h3 style="margin-bottom:1rem;">🎥 فيديوهات إضافية</h3><div style="display:flex; gap:1rem; flex-wrap:wrap;">${book.moreVideos.map((v, i) => `<button class="btn-sm preview-btn" onclick="openVideoLink('${v}')">فيديو ${i+1} <i class="fa-solid fa-play"></i></button>`).join('')}</div>`;
-        actionDiv.parentNode.appendChild(moreSec);
-    }
+    // More videos removed.
 
     mainViewDiv.classList.add('hidden');
     detailViewDiv.classList.remove('hidden');
@@ -278,7 +264,7 @@ function openPreviewModal(id) {
 
 function openBuyWhatsapp(id) {
     const book = books.find(b => b.id === id);
-    const msg = `أرغب في شراء كتاب "${book.title}" بسعر ${book.price} ج.م بدلاً من ${book.oldPrice} ج.م من متجر كتبي الرقمية.`;
+    const msg = `أرغب في شراء كتاب "${book.title}" بسعر ${book.price} ج.م بدلاً من ${book.oldPrice} ج.م من متجر E-books.`;
     window.open(`https://wa.me/+201550537533?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
